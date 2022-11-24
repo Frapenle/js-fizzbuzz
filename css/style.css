@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin: 2rem auto;
+    max-width: 90%;
+}
+
+div {
+    width: calc(100% / 5 - 2rem);
+    aspect-ratio: 1;
+    background-color: red;
+    color: white;
+    font-size: 3rem;
+    font-weight: 900;
+    padding: .5rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+div.buzz {
+    background-color: rgb(255, 115, 0);
+}
+
+div.fizz {
+    background-color: rgb(255, 225, 0);
+    
+}
+
+div.fizzbuzz {
+    background-color: rgb(144, 0, 255);
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+.container > div {
+    display: flex;
+}
+
+.container > div {
+    position: relative;
+}
+
+.container p.buzz{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+}
+
+.container p.fizz {
+    position: absolute;
+    bottom: -2px;
+    right: 6px;
+    letter-spacing: .2rem;
+}
+
+/* tablet */
+@media screen and (max-width: 768px) {
+    div {
+        width: calc(100% / 4 - 2rem);
+    }
+}
+
+/* mobile */
+@media screen and (max-width: 596px) {
+    div {
+        width: calc(100% / 2 - 2rem);
+    }
+}
